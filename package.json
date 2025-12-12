@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/VATSU-tech/ESP32_Node_commander_des_lampes#readme",
   "dependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.1",
+    "@types/ws": "^8.18.1",
     "express": "^5.2.1",
     "ws": "^8.18.3"
   }
