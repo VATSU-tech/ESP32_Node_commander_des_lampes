@@ -11,7 +11,7 @@ const wss = new WebSocket.Server({ server });
 const PORT = 3000;
 
 // Servir la page statique (index.html)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Garder la connexion de l'ESP32 (une seule pour ce tutoriel)
 let espSocket = null;
