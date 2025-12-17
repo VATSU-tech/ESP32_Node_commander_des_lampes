@@ -2,10 +2,14 @@ const express = require('express');
 const axios = require('axios');
 
 const app = express();
-const ESP_IP = '192.168.1.50'; // IP ESP32
+const ESP_IP = '10.42.0.77'; // IP ESP32
 const PORT = 3000;
 
-app.use(express.static('../public'));
+// app.use(express.static('public'));
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 
 app.get('/control/:pin/:state', async (req, res) => {
   const { pin, state } = req.params;
