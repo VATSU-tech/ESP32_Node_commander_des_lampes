@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Contrôle LEDs</h2>
+
+<button onclick="control(2, 'on')">LED 2 ON</button>
+<button onclick="control(2, 'off')">LED 2 OFF</button>
+
+<button onclick="control(4, 'on')">LED 4 ON</button>
+<button onclick="control(4, 'off')">LED 4 OFF</button>
+
+<script>
+function control(pin, state) {
+  fetch(`/control/${pin}/${state}`)
+    .then(res => res.text())
+    .then(data => console.log(data));
+}
+</script>
+
+</body>
+</html>
