@@ -15,7 +15,7 @@
       fetch("https://esp32-node-commander-des-lampes-1.onrender.com/led/led1", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ state })
+        body: JSON.stringify({ state : state})
       });
     }
   </script>
