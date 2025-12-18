@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contrôle LED IoT</title>
+</head>
+<body>
+  <h1>Contrôle Lampe</h1>
+  <button onclick="setLed('ON')">ON</button>
+  <button onclick="setLed('OFF')">OFF</button>
+
+  <script>
+    function setLed(state) {
+      fetch("https://YOUR_SERVER_URL.onrender.com/led/led1", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ state })
+      });
+    }
+  </script>
+</body>
+</html>
