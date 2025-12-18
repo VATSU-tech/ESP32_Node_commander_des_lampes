@@ -5,7 +5,7 @@
 const char* ssid = "YOUR_WIFI";
 const char* password = "YOUR_PASSWORD";
 
-String serverUrl = "https://YOUR_SERVER_URL.onrender.com";
+String serverUrl = "https://esp32-node-commander-des-lampes-1.onrender.com/";
 
 int ledPin = 2;
 

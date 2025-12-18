@@ -12,7 +12,7 @@
 
   <script>
     function setLed(state) {
-      fetch("https://YOUR_SERVER_URL.onrender.com/led/led1", {
+      fetch("https://esp32-node-commander-des-lampes-1.onrender.com/led/led1", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ state })
