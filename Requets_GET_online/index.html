@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,18 +5,36 @@
   <title>Contrôle LED IoT</title>
 </head>
 <body>
-  <h1>Contrôle Lampe</h1>
-  <button onclick="setLed('ON')">ON</button>
-  <button onclick="setLed('OFF')">OFF</button>
 
-  <script>
-    function setLed(state) {
-      fetch("https://esp32-node-commander-des-lampes-1.onrender.com/led/led1", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ state : state})
-      });
-    } 
-  </script>
+<h1>Contrôle des lampes</h1>
+
+<div>
+  <h3>Lampe 1</h3>
+  <button onclick="setLed('led1','ON')">ON</button>
+  <button onclick="setLed('led1','OFF')">OFF</button>
+</div>
+
+<div>
+  <h3>Lampe 2</h3>
+  <button onclick="setLed('led2','ON')">ON</button>
+  <button onclick="setLed('led2','OFF')">OFF</button>
+</div>
+
+<div>
+  <h3>Lampe 3</h3>
+  <button onclick="setLed('led3','ON')">ON</button>
+  <button onclick="setLed('led3','OFF')">OFF</button>
+</div>
+
+<script>
+function setLed(led, state) {
+  fetch("https://esp32-node-commander-des-lampes-1.onrender.com/led/" + led, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ state: state })
+  });
+}
+</script>
+
 </body>
 </html>
